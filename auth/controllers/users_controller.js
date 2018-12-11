@@ -43,7 +43,16 @@ exports.login = function(req, res) {
                     req.session.user = user.id;
                     req.session.username = user.username;
                     req.session.msg = 'Authenticated as ' + user.username;
-                    req.session.color = user.color;
+                    req.session.B1 = user.B1;
+                    req.session.B2 = user.B2;
+                    req.session.B3 = user.B3;
+                    req.session.B4 = user.B4;
+                    req.session.B5 = user.B5;
+                    req.session.B6 = user.B6;
+                    req.session.B7 = user.B7;
+                    req.session.B8 = user.B8;
+                    req.session.B9 = user.B9;
+                    req.session.B10 = user.B10;
                     res.redirect('/');
                 });
             }
@@ -73,14 +82,32 @@ exports.updateUser = function(req, res) {
     User.findOne({ _id: req.session.user })
         .exec(function(err, user) {
             user.set('email', req.body.email);
-            user.set('color', req.body.color);
+            user.set('B1', req.body.B1);
+            user.set('B2', req.body.B2);
+            user.set('B3', req.body.B3);
+            user.set('B4', req.body.B4);
+            user.set('B5', req.body.B5);
+            user.set('B6', req.body.B6);
+            user.set('B7', req.body.B7);
+            user.set('B8', req.body.B8);
+            user.set('B9', req.body.B9);
+            user.set('B10', req.body.B10);
             user.save(function(err) {
                 if (err) {
                     res.sessor.error = err;
                 }
                 else {
                     req.session.msg = 'User Updated.';
-                    req.session.color = req.body.color;
+                    req.session.B1 = user.B1;
+                    req.session.B2 = user.B2;
+                    req.session.B3 = user.B3;
+                    req.session.B4 = user.B4;
+                    req.session.B5 = user.B5;
+                    req.session.B6 = user.B6;
+                    req.session.B7 = user.B7;
+                    req.session.B8 = user.B8;
+                    req.session.B9 = user.B9;
+                    req.session.B10 = user.B10;
                 }
                 res.redirect('/user');
             });
