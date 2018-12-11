@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
-var UserSchema = new Schema({
+var UserSchema2 = new Schema({
     username: { type: String, unique: true },
     email: String,
     B1: String,
@@ -15,4 +15,4 @@ var UserSchema = new Schema({
     B10: String,
     hashed_password: String
 });
-mongoose.model('User', UserSchema);
+mongoose.model('User', UserSchema2);
