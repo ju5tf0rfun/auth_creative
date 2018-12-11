@@ -1,0 +1,18 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+body {
+  color: black;
+  background-image: url("mountDrone.jpg");/*/html/homework/lab-5-mongo-ShinjinE/comments/public/images/time.jpg*/
+  height:600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
